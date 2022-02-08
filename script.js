@@ -27,11 +27,11 @@ allclearBtn.addEventListener("click", allClear);
 decimalBtn.addEventListener("click", appendDecimal);
 
 numberButtons.forEach((btn) =>
-  btn.addEventListener("click", () => appendNumber(btn.textContent))
+  btn.addEventListener("click", () => appendNumber(btn.getAttribute('value')))
 );
 
 operatorButtons.forEach((btn) =>
-  btn.addEventListener("click", () => setOperation(btn.textContent))
+  btn.addEventListener("click", () => setOperation(btn.getAttribute('value')))
 );
 
 // appends a number to the screen
