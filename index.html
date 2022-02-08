@@ -1,49 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ricky Mavlingcar">
+    <meta name="description" content="Calculator app written in JS">
     <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<section class="container-parent">
-		<div class="container-child">
-			<div class="calculator">
-				<div class="display">
-					<div class="calculator-display">
-						<output class="user-input" type="text" id="user-input"></output>	
-						<output class="result" type="text" id="result">0</output>	
-					</div>					
-				</div>
-				<div class="calc-buttons">
-					<button class="allclear" data-type="reset" id="allclear">AC</button>
-					<button class="clear" data-type="backspace" id="clear">C</button>
-					<button class="operator" data-type="operator" id="mod" value="%" >&#37;</button>
-					<button class="operator" data-type="operator" id="divide" value="/" >&#247;</button>
-					<button class="digit" data-type="number" value="7" >7</button>
-					<button class="digit" data-type="number" value="8" >8</button>
-					<button class="digit" data-type="number" value="9" >9</button>
-					<button class="operator" data-type="operator" id="plus" value="+" >&#43;</button>
-					<button class="digit" data-type="number" value="4" >4</button>
-					<button class="digit" data-type="number" value="5" >5</button>
-					<button class="digit" data-type="number" value="6" >6</button>
-					<button class="operator" data-type="operator" id="minus" value="-" >&#45;</button>
-					<button class="digit" data-type="number" value="1" >1</button>
-					<button class="digit" data-type="number" value="2" >2</button>
-					<button class="digit" data-type="number" value="3" >3</button>
-					<button class="operator" data-type="operator" id="multiply" value="x" >&#215;</button>
-					<button class="digit" data-type="number" value="0" >0</button>
-					<button class="decimal" data-type="decimal" id="decimal" value="." >.</button>
-					<button class="equals" data-type="equal" id="equals" value="=" >&#61;</button>
-				</div>
-			</div>
-		</div>
-	</section>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  </head>
+  <body>
+    <section class="container-parent">
+      <div class="container-child">
+        <div class="calculator">
+          <div class="display">
+            <div class="calculator-display">
+              <output class="user-input" type="text" id="user-input"></output>
+              <output class="result" type="text" id="result">0</output>
+            </div>
+          </div>
+          <div class="calc-buttons">
+            <button
+              class="allclear"
+              data-type="reset"
+              id="allclear"
+              onclick="this.blur();"
+            >
+              AC
+            </button>
+            <button class="clear" data-type="backspace" id="clear" onclick="this.blur();">C</button>
+            <button class="operator" data-type="operator" id="mod" value="%" onclick="this.blur();">
+              &#37;
+            </button>
+            <button class="operator" data-type="operator" id="divide" value="/" onclick="this.blur();">
+              &#247;
+            </button>
+            <button class="digit" data-type="number" value="7" onclick="this.blur();">7</button>
+            <button class="digit" data-type="number" value="8" onclick="this.blur();">8</button>
+            <button class="digit" data-type="number" value="9" onclick="this.blur();">9</button>
+            <button class="operator" data-type="operator" id="plus" value="+" onclick="this.blur();">
+              &#43;
+            </button>
+            <button class="digit" data-type="number" value="4" onclick="this.blur();">4</button>
+            <button class="digit" data-type="number" value="5" onclick="this.blur();">5</button>
+            <button class="digit" data-type="number" value="6" onclick="this.blur();">6</button>
+            <button class="operator" data-type="operator" id="minus" value="-" onclick="this.blur();">
+              &#45;
+            </button>
+            <button class="digit" data-type="number" value="1" onclick="this.blur();">1</button>
+            <button class="digit" data-type="number" value="2" onclick="this.blur();">2</button>
+            <button class="digit" data-type="number" value="3" onclick="this.blur();">3</button>
+            <button
+              class="operator"
+              data-type="operator"
+              id="multiply"
+              value="x"
+              onclick="this.blur();"
+            >
+              &#215;
+            </button>
+            <button class="digit" data-type="number" value="0" onclick="this.blur();">0</button>
+            <button class="decimal" data-type="decimal" id="decimal" value="." onclick="this.blur();">
+              .
+            </button>
+            <button class="equals" data-type="equal" id="equals" value="=" onclick="this.blur();">
+              &#61;
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
-        <p>Copyright &copy; <script>document.write( new Date().getFullYear() );</script> Ricky Mavlingcar</p>
+      <p>
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Ricky Mavlingcar
+      </p>
     </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
